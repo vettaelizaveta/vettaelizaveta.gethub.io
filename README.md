@@ -1,2 +1,2 @@
-# vettaelizaveta.gethub.io
+# Liza Vetta
 Мой первый сайт
