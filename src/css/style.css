@@ -245,7 +245,7 @@ nav{
      float: left;
     width: 150px;
      height: 19px;
-    margin: 0px 5px 0px 350px;
+    margin: 0px 5px 0px 400px;
     text-align: left;
       padding-left: 10px;  
         padding-bottom: 50px;
@@ -256,7 +256,7 @@ nav{
     }
 .Kays_item2 {
     width: (100% - 400px);
-    margin: 0px 400px;
+    margin: 0px 250px;
     }
 
     
@@ -398,7 +398,7 @@ nav{
 .name1{width: 333px;
      height: 100px;
     margin: 10px auto 0px 400px;
-       float: left;}
+    }
 
 .vvod_item{
     float: left;
@@ -418,6 +418,7 @@ nav{
 }
 
 .otpravit{
+        display: block;
      width: 96px;
     height: 40px;
     text-align: center;
@@ -427,6 +428,8 @@ nav{
     color: #336b44;
     font-size: 13px;
     cursor: pointer;
-    margin: 50px 14px 0px 14px;
+    margin: 10px 14px 0px 500px;
+
+    
 }
 
