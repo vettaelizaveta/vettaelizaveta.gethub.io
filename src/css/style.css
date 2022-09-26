@@ -153,9 +153,10 @@ nav{
 
 .Kays p{
     text-align: left;
-    width: 600px;
+    width: 1000px
     font-size: 16px;
-      margin: 7px 70px;
+      margin: 7px 0px 0px 200px;
+  
     
 }
 
@@ -235,29 +236,38 @@ nav{
 
 .Kays_item2 h3{
     text-align: left;
-    width: 200px;
+    width: 300px;
     font-size: 16px;
-     margin: 0px 5px 0px 70px;
+     margin: 10px 5px 0px 70px;
     padding-bottom: 5px;
+        padding-left: 130px;
     color: #d17700;} 
 
 .Kays_item2 {
      float: left;
-    width: 150px;
+    width: 850px;
      height: 19px;
+    margin: 0px 5px 0px 350px;
     margin: 0px 5px 0px 400px;
     text-align: left;
       padding-left: 10px;  
         padding-bottom: 50px;
+    
 }
+.Kays_item2 {
+    width: 70%  ;
+    margin: 0px 0px 0px 90px;
+     
+   
+    }
+
+
 .Kays_item {
     width: 100px;
     margin: 0px auto;
     }
-.Kays_item2 {
-    width: (100% - 400px);
-    margin: 0px 250px;
-    }
+
+
 
     
     .Calculator{
