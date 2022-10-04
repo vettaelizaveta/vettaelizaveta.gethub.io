@@ -1,10 +1,79 @@
 body{
     font-family: Arial, sans-serif;
 }
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+.loader {
+  color: #ffba00;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  width: 10em;
+  height: 10em;
+  box-shadow: inset 0 0 0 1em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+.loader:before {
+  width: 5.2em;
+  height: 10.2em;
+  background: #0dc553;
+  border-radius: 10.2em 0 0 10.2em;
+  top: -0.1em;
+  left: -0.1em;
+  -webkit-transform-origin: 5.1em 5.1em;
+  transform-origin: 5.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease 1.5s;
+  animation: load2 2s infinite ease 1.5s;
+}
+.loader:after {
+  width: 5.2em;
+  height: 10.2em;
+  background: #336b44;
+  border-radius: 0 10.2em 10.2em 0;
+  top: -0.1em;
+  left: 4.9em;
+  -webkit-transform-origin: 0.1em 5.1em;
+  transform-origin: 0.1em 5.1em;
+  -webkit-animation: load2 2s infinite ease;
+  animation: load2 2s infinite ease;
+}
+@-webkit-keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes load2 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
 nav{
     width: 100%;
     height: 60px;
     background:#336b44;
+    position: fixed;
+    z-index: 2;
 }
 
 .logo{
@@ -13,8 +82,15 @@ nav{
     font-size: 30px;
     line-height: 60px;
     padding-left: 150px;
+    -webkit-animation: comming 2s ease;
+    -o-animation:comming 2s ease; 
+    animation:comming 2s ease; 
 }
 
+main {
+    width: 100%;
+    height: 100%;
+}
 .menu{
     float: left;
     padding-left: 280px;
@@ -28,22 +104,45 @@ nav{
     line-height: 60px;
     margin-right: 20px;
     text-transform: uppercase;
+    -webkit-animation: topshift 0.4s ease forwards;
+    -o-animation:topshift 0.4s ease forwards ;
+    animation:topshift 0.4s ease forwards ;
+    opacity: 0;
 }
 
 .menu li a:visited{
     color: #ffba00;
 }
+.menu li a{
+    transition: all 0.1s;
+    color: white;
+    transform: scale(1);
+    display: inline-block;
+}
 
+.menu li a:hover{
+    color: white;
+}
+.menu li a:active{
+    transform: scale(0.9);
+}
 .main{
     width: 100%;
-    height: calc(100% - 60px);
+    height: calc(100% + 0px);
     background: url(../img/pr.jpg) 90% 100%/auto 85% repeat;
 }
 .title__container{
     float: left;
-    margin: 150px 0px 0px 432px;
+    margin: 150px 0px 0px 400px;
     color: #ffba00;
     text-align: center;
+    opacity: 0;
+    -webkit-animation: titlemove 1s ease forwards;
+    -o-animation: titlemove 1s ease forwards;
+    animation:titlemove 1s ease forwards ;
+    -webkit-animation: titlemove 2s forwards;
+    -o-animation: titlemove 2s forwards ;
+    animation:titlemove 2s forwards ;
   
 }
 
@@ -73,6 +172,64 @@ nav{
     cursor: pointer;
     margin: 50px 14px 0px 14px;
 }
+
+.title__container input{
+transition: all 0.2s;
+    transform: scale(1);
+}
+.title__container input:hover{
+    background: #bb8a52;
+    color:white;
+}
+.title__container input:active{
+    transform: scale(0.9);
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+@keyframes titlemove {
+    from {
+        opacity: 0;
+        margin-left: -500px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 400px;
+    }
+}
+
 
 .about_me h2{
     text-align: center;
@@ -108,6 +265,32 @@ nav{
     margin-top: 15px;
 }
 
+
+.about_me input{
+        display: block;
+     width: 120px;
+    height: 20px;
+    text-align: center;
+    border: 2px solid #336b44;
+    background: none;
+    border-radius: 5px;
+    color: #336b44;
+    font-size: 13px;
+    cursor: pointer;
+    margin: 10px 14px 0px 310px;
+}
+
+.about_me input{
+    transform: scale(1);
+}
+.about_me input:hover{
+    background: #336b44;
+    color:white;
+}
+.about_me input:active{
+    transform: scale(0.9);
+}
+
 .skills h2{
     text-align: center;
     border-bottom: 4px solid #d17700;
@@ -137,11 +320,28 @@ nav{
 .skills_item img{
      display: block;
     margin: 0 auto;
- 
     width: 50px;
     height: 50px;
     overflow: hidden;
+    -webkit-animation: limon_img 0.4s ease forwards;
+    -o-animation:limon_img 0.4s ease forwards ;
+    animation:limon_img 0.4s ease forwards ;
+    opacity: 0;*/
     
+}
+
+@keyframes limon_img {
+    from {
+        opacity: 0;
+     margin-left: -100px;
+    }
+    to{
+        opacity: 1;
+        margin-left: 90px;
+    }
+}
+.skills_item img:hover{
+    transform: scale(0.7, 0.7);
 }
 
  .Kays_item{
@@ -208,12 +408,23 @@ nav{
     text-align:left;
     border: 3px solid #336b44;
     background: #336b44;
-    border-radius: 10px;
     color: #fff;
     font-size: 16px;
     cursor: pointer;
 }
 
+.Kays_item input{
+    transform: scale(1);
+}
+.Kays_item input:hover{
+    background: #336b44;
+    color:#ffba00;
+     border-radius: 10px;
+}
+.Kays_item input:active{
+    
+    transform: scale(0.9);
+}
 
 .Kays_item { text-align: center;
     width: 600px;
@@ -297,7 +508,7 @@ nav{
 .value h2{
     text-align: center;
  border-bottom: 4px solid #d17700;
-    width: 96px;
+    width: 105px;
     font-size: 22px;
     margin: 10px auto;
     padding-bottom: 5px;
@@ -313,6 +524,46 @@ nav{
        line-height:normal;
 }
 
+
+.satistics h2{
+    text-align:center;
+    border-bottom: 4px solid #d17700;
+    width: 120px;
+    font-size: 22px;
+    margin: 15px auto;
+    padding-bottom: 5px;
+     color: #336b44;
+   
+}
+.satistics{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+  background: url(..//img/photo_2022-10-04_01-40-52.jpg)  90% 100%/auto 100% fixed repeat;
+    
+  
+}
+
+.satistics_item h3{
+    color:#d17700;
+    font-size: 30px;
+     margin: 10px auto;
+    padding-top: 5px;
+}
+
+.satistics_item{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.satistics_item img{
+     display: block;
+    margin: 0 auto;
+    width: 80px;
+    height: 50px;
+    overflow: hidden;  
+}
 
 .comment h2{
     text-align: center;
@@ -439,7 +690,16 @@ nav{
     font-size: 13px;
     cursor: pointer;
     margin: 10px 14px 0px 500px;
+      transform: scale(1);
+}
 
-    
+
+
+.otpravit:hover{
+    background: #336b44;
+    color:white;
+}
+.otpravit:active{
+    transform: scale(0.9);
 }
 
