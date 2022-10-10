@@ -1,8 +1,6 @@
 body{
-    font-family: Arial, sans-serif;
+    font-family: 'Oswald', sans-serif;
 }
-
-
 nav{
     width: 100%;
     height: 60px;
@@ -10,41 +8,41 @@ nav{
     position: fixed;
     z-index: 2;
 }
-
 .logo{
     float: left;
     color: #ffba00;
+    width: 250px;
     font-size: 30px;
     line-height: 60px;
-    padding-left: 150px;
+   display:flex;
+    justify-content: flex-end;
     -webkit-animation: comming 2s ease;
     -o-animation:comming 2s ease; 
     animation:comming 2s ease; 
+      font-family: 'Lobster', cursive;
 }
 
-main {
-    width: 100%;
-    height: 100%;
-}
-.menu{
-    float: left;
-    padding-left: 280px;
+.menu{ 
+    
+     padding-left: 100px;
+   line-height: 60px;
+    display: flex;
+    justify-content: space-around;
     
 }
-
 .menu li{
-    float: left;
+  
+   float: left;
+    margin: 10px;
     font-size: 16px;
     color: #ffba00;
-    line-height: 60px;
-    margin-right: 20px;
-    text-transform: uppercase;
-    -webkit-animation: topshift 0.4s ease forwards;
+    width: 80px;
+   text-transform: uppercase;
+   -webkit-animation: topshift 0.4s ease forwards;
     -o-animation:topshift 0.4s ease forwards ;
     animation:topshift 0.4s ease forwards ;
-    opacity: 0;
+  opacity: 0;
 }
-
 .menu li a:visited{
     color: #ffba00;
 }
@@ -61,14 +59,66 @@ main {
 .menu li a:active{
     transform: scale(0.9);
 }
+
+@keyframes topshift {
+    from {
+        opacity: 0;
+        margin-top: -80px;
+    }
+    to{
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+@keyframes comming {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.menu li:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu li:nth-child(3){
+    animation-delay: 0.8s;
+}
+.menu li:nth-child(4){
+    animation-delay: 1.2s;
+}
+.menu li:nth-child(5){
+    animation-delay: 1.6s;
+}
+.menu li:nth-child(6){
+    animation-delay: 2s;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+}
+
 .main{
     width: 100%;
     height: calc(100% + 0px);
     background: url(../img/pr.jpg) 90% 100%/auto 85% repeat;
 }
+
+
+@media (min-height: 1000px)
+{
+  main{
+    height: 30%;
+   }
+}
+
 .title__container{
     float: left;
-    margin: 150px 0px 0px 400px;
+    margin: 0px auto;
+    margin-top: 150px;
     color: #ffba00;
     text-align: center;
     opacity: 0;
@@ -86,6 +136,7 @@ main {
     font-size: 60px;
     text-align: center;
     font-weight: bold;
+    font-family: 'Lobster', cursive;
 }
 
 .title__container h4{
@@ -119,41 +170,6 @@ transition: all 0.2s;
 .title__container input:active{
     transform: scale(0.9);
 }
-
-@keyframes comming {
-    from {
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-@keyframes topshift {
-    from {
-        opacity: 0;
-        margin-top: -80px;
-    }
-    to{
-        opacity: 1;
-        margin-top: 0px;
-    }
-}
-.menu li:nth-child(2){
-    animation-delay: 0.4s;
-}
-.menu li:nth-child(3){
-    animation-delay: 0.8s;
-}
-.menu li:nth-child(4){
-    animation-delay: 1.2s;
-}
-.menu li:nth-child(5){
-    animation-delay: 1.6s;
-}
-.menu li:nth-child(6){
-    animation-delay: 2s;
-}
-
 @keyframes titlemove {
     from {
         opacity: 0;
@@ -166,6 +182,7 @@ transition: all 0.2s;
 }
 
 
+
 .about_me h2{
     text-align: center;
  border-bottom: 4px solid #d17700;
@@ -173,6 +190,7 @@ transition: all 0.2s;
     font-size: 22px;
     margin: 10px auto;
     padding-bottom: 5px;
+      font-family: 'Lobster', cursive;
 }
 
 .about_me{
@@ -204,15 +222,16 @@ transition: all 0.2s;
 .about_me input{
         display: block;
      width: 120px;
-    height: 20px;
+    height: 25px;
     text-align: center;
     border: 2px solid #336b44;
     background: none;
     border-radius: 5px;
     color: #336b44;
+    padding-bottom: 5px;
     font-size: 13px;
     cursor: pointer;
-    margin: 10px 14px 0px 310px;
+    margin: 0px auto;
 }
 
 .about_me input{
@@ -225,19 +244,24 @@ transition: all 0.2s;
 .about_me input:active{
     transform: scale(0.9);
 }
-
 .skills h2{
     text-align: center;
     border-bottom: 4px solid #d17700;
     width: 96px;
+    padding-top: 10px;
+     padding-bottom: 10px;
     font-size: 22px;
-    margin: 10px auto;
+    margin: 0px auto;
     padding-bottom: 5px;
      color: #336b44;
+      font-family: 'Lobster', cursive;
 }
-.skills{
-    width: 920px;
-    margin: 0 auto;
+
+.skills2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
 }
 
 .skills_item h3{
@@ -247,7 +271,6 @@ transition: all 0.2s;
     padding-top: 5px;
 }
 .skills_item{
-    float: left;
     width: 230px;
     text-align: center;
 }
@@ -261,7 +284,7 @@ transition: all 0.2s;
     -webkit-animation: limon_img 0.4s ease forwards;
     -o-animation:limon_img 0.4s ease forwards ;
     animation:limon_img 0.4s ease forwards ;
-    opacity: 0;*/
+    opacity: 0;
     
 }
 
@@ -278,14 +301,12 @@ transition: all 0.2s;
 .skills_item img:hover{
     transform: scale(0.7, 0.7);
 }
-
  .Kays_item{
     float: left;
     width: 230px;
     text-align: center;
      
 }
-
 .Kays p{
     text-align: left;
     width: 1000px
@@ -314,6 +335,7 @@ transition: all 0.2s;
        border-bottom: 4px solid #d17700;
     padding-bottom: 5px;
      color: #336b44;
+      font-family: 'Lobster', cursive;
 }
 
 .Kays_item h3{
@@ -441,6 +463,7 @@ transition: all 0.2s;
 }
 
 .value h2{
+      font-family: 'Lobster', cursive;
     text-align: center;
  border-bottom: 4px solid #d17700;
     width: 105px;
@@ -468,6 +491,7 @@ transition: all 0.2s;
     margin: 15px auto;
     padding-bottom: 5px;
      color: #336b44;
+      font-family: 'Lobster', cursive;
    
 }
 .satistics{
@@ -479,6 +503,14 @@ transition: all 0.2s;
   
 }
 
+.satistics2{
+    width: 100%;
+    display: flex;
+    justify-content:space-around;
+        text-align: center;
+    
+}
+
 .satistics_item h3{
     color:#d17700;
     font-size: 30px;
@@ -486,21 +518,17 @@ transition: all 0.2s;
     padding-top: 5px;
 }
 
-.satistics_item{
-    float: left;
-    width: 25%;
-    text-align: center;
-}
 
 .satistics_item img{
      display: block;
     margin: 0 auto;
-    width: 80px;
+    width: 70px;
     height: 50px;
     overflow: hidden;  
 }
 
 .comment h2{
+      font-family: 'Lobster', cursive;
     text-align: center;
  border-bottom: 4px solid #d17700;
     width: 96px;
@@ -537,6 +565,7 @@ transition: all 0.2s;
     background: url(../img/fon2.jpg) 100% 100%/auto 100% repeat;}
 
 .contacts h2{
+      font-family: 'Lobster', cursive;
     text-align: center;
     border-bottom: 4px solid #d17700;
     width: 96px;
@@ -552,12 +581,15 @@ transition: all 0.2s;
   
 }
 
-
-.contacts_item{
-    float: left;
-    width: 360px;
-    text-align: center;
+.contacts2{
+        width: 100%;
+    display: flex;
+    justify-content:space-around;
+        text-align: center;
+    
 }
+
+
 
 .contacts_item img{
      display: block;
@@ -581,6 +613,14 @@ transition: all 0.2s;
      height: 240px;
  }
 
+.vvod2
+{
+       width: 100%;
+    display: flex;
+    justify-content:center;
+        text-align: center;
+    
+}
 .vvod h3{
     text-align: center;
     width: 300px;
@@ -589,29 +629,30 @@ transition: all 0.2s;
     padding-bottom: 5px;
      color: #336b44;
 }
+.name1{
+      width: 100%;
+    display: flex;
+    justify-content:center;
+        text-align: center;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 
-
-.name1{width: 333px;
+.vvod textarea{width: 333px;
      height: 100px;
-    margin: 10px auto 0px 400px;
+    margin: 0px auto;
+       border: 2px solid #336b44;
+    border-radius: 10px;
+    
     }
 
-.vvod_item{
-    float: left;
-    width: 150px;
-     height: 19px;
-    margin: 0px 5px 0px 400px;
-    text-align: left;
-       padding-right: 10px; 
+.vvod2 input{
+    margin-left: 5px;
+    border: 2px solid #336b44;
+     border-radius: 10px;
 }
-.vvod_item2{
-    float: left;
-    width: 150px;
-     height: 19px;
-    margin: 0px 5px 0px 5px;
-    text-align: left;
-      padding-left: 10px;  
-}
+
+
 
 .otpravit{
         display: block;
@@ -624,7 +665,7 @@ transition: all 0.2s;
     color: #336b44;
     font-size: 13px;
     cursor: pointer;
-    margin: 10px 14px 0px 500px;
+    margin: 0px auto;
       transform: scale(1);
 }
 
@@ -638,3 +679,12 @@ transition: all 0.2s;
     transform: scale(0.9);
 }
 
+
+@media (min-height: 1000px)
+{
+  .contacts{
+    height: 25%;
+   
+
+   }
+}
