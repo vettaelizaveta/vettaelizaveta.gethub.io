@@ -1,17 +1,18 @@
 body{
     font-family: 'Oswald', sans-serif;
 }
+
 nav{
     width: 100%;
     height: 60px;
     background:#336b44;
-    position: fixed;
     z-index: 2;
+    position: fixed;
 }
 .logo{
     float: left;
     color: #ffba00;
-    width: 250px;
+    width: 170px;
     font-size: 30px;
     line-height: 60px;
    display:flex;
@@ -23,7 +24,6 @@ nav{
 }
 
 .menu{ 
-    
      padding-left: 100px;
    line-height: 60px;
     display: flex;
@@ -51,6 +51,7 @@ nav{
     color: white;
     transform: scale(1);
     display: inline-block;
+    text-decoration:none; 
 }
 
 .menu li a:hover{
@@ -96,6 +97,58 @@ nav{
     animation-delay: 2s;
 }
 
+
+
+
+
+.container{width:100%;
+    padding-right:15px;
+    padding-left:15px;
+    margin-right:auto;
+    margin-left:auto}
+
+.toggle-icon{background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width:50px;
+    height:50px;
+    position:absolute;}
+
+
+
+input[type=checkbox],label{display:none}
+
+@media only screen and (max-width: 980px) {
+    
+input[type=checkbox]{position:absolute;
+    top:-9999px;
+    left:-9999px;
+    background:none}
+    
+input[type=checkbox]:fous{background:none}
+    
+label{float:right;
+    display:inline-block;
+    cursor:pointer;
+    margin-right:65px}
+    
+input[type=checkbox]:checked ~ .menu{display:block}
+    
+.menu{display:none;
+    position:absolute;
+    right:0;
+    top:50px;
+    background-color:#336b44;
+    padding:0;
+    z-index:2}
+    
+.menu ul{width:auto}
+    
+.menu ul li{float:none;
+    padding:0;
+    width:100%;
+    display:table}
+}
+
+
 main {
     width: 100%;
     height: 100%;
@@ -108,18 +161,12 @@ main {
 }
 
 
-@media (min-height: 1000px)
-{
-  main{
-    height: 30%;
-   }
-}
 
 .title__container{
     float: left;
-    margin: 0px auto;
-    margin-top: 150px;
     color: #ffba00;
+    margin: 0px auto;
+    margin-top: 100px;
     text-align: center;
     opacity: 0;
     -webkit-animation: titlemove 1s ease forwards;
@@ -183,43 +230,28 @@ transition: all 0.2s;
 
 
 
-.about_me h2{
+.about_me_container h2{
     text-align: center;
  border-bottom: 4px solid #d17700;
     width: 96px;
     font-size: 22px;
-    margin: 10px auto;
+    margin: 80px auto 30px;
     padding-bottom: 5px;
       font-family: 'Lobster', cursive;
-}
-
-.about_me{
-    width: 740px;
-    margin: 0 auto;
     color: #336b44;
 }
 
 
-.about_me img{
+.about_me_container img{
     display: block;
-    margin: 0 auto;
     border: 5px solid #336b44;
     width: 70px;
     height: 70px;
     overflow: hidden;
 }
 
-.about_me p{
-    margin-top: 30px;
-    color:black;
-}
 
-.about_me .secondText{
-    margin-top: 15px;
-}
-
-
-.about_me input{
+.about_me_container input{
         display: block;
      width: 120px;
     height: 25px;
@@ -234,17 +266,23 @@ transition: all 0.2s;
     margin: 0px auto;
 }
 
-.about_me input{
+.about_me_container input{
     transform: scale(1);
 }
-.about_me input:hover{
+.about_me_container input:hover{
     background: #336b44;
     color:white;
 }
-.about_me input:active{
+.about_me_container input:active{
     transform: scale(0.9);
 }
-.skills h2{
+
+.skills_container{
+     padding-top: 90px;
+     padding-bottom: 96px;
+}
+
+.skills_container h2{
     text-align: center;
     border-bottom: 4px solid #d17700;
     width: 96px;
@@ -257,24 +295,6 @@ transition: all 0.2s;
       font-family: 'Lobster', cursive;
 }
 
-.skills2{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    
-}
-
-.skills_item h3{
-    color:#d17700;
-    font-size: 16px;
-     margin: 10px auto;
-    padding-top: 5px;
-}
-.skills_item{
-    width: 230px;
-    text-align: center;
-}
-
 .skills_item img{
      display: block;
     margin: 0 auto;
@@ -284,10 +304,15 @@ transition: all 0.2s;
     -webkit-animation: limon_img 0.4s ease forwards;
     -o-animation:limon_img 0.4s ease forwards ;
     animation:limon_img 0.4s ease forwards ;
-    opacity: 0;
-    
 }
 
+
+.skills_item h3{
+    color:#d17700;
+    font-size: 16px;
+     margin: 10px auto;
+    padding-top: 5px;
+}
 @keyframes limon_img {
     from {
         opacity: 0;
@@ -301,20 +326,12 @@ transition: all 0.2s;
 .skills_item img:hover{
     transform: scale(0.7, 0.7);
 }
- .Kays_item{
-    float: left;
-    width: 230px;
-    text-align: center;
-     
+
+.Kays{
+      max-width: 100%;
 }
-.Kays p{
-    text-align: left;
-    width: 1000px
-    font-size: 16px;
-      margin: 7px 0px 0px 200px;
-  
-    
-}
+
+
 
 .Kays img{
      display: block;
@@ -323,6 +340,7 @@ transition: all 0.2s;
     height: 440px;
     overflow: hidden;
      padding-top: 20px;
+    max-width: 100%;
      
 }
 
@@ -338,6 +356,7 @@ transition: all 0.2s;
       font-family: 'Lobster', cursive;
 }
 
+
 .Kays_item h3{
     font-size: 16px;
     margin: 10px auto;
@@ -350,18 +369,11 @@ transition: all 0.2s;
      color: #d17700;
 }
 
-.Kays_item p{
-    text-align: left;
-    width: 200px;
-    font-size: 16px;
-     margin: 7px 70px 0px 150px;
-    padding-bottom: 5px;
-}
 
 .Kays_item input{
      text-align: center;
     width: 150px;
-    margin: 7px 150px;
+   
     text-align:left;
     border: 3px solid #336b44;
     background: #336b44;
@@ -406,40 +418,13 @@ transition: all 0.2s;
     text-align: left;
     width: 300px;
     font-size: 16px;
-     margin: 10px 5px 0px 70px;
     padding-bottom: 5px;
         padding-left: 130px;
     color: #d17700;} 
 
-.Kays_item2 {
-     float: left;
-    width: 850px;
-     height: 19px;
-    margin: 0px 5px 0px 350px;
-    margin: 0px 5px 0px 400px;
-    text-align: left;
-      padding-left: 10px;  
-        padding-bottom: 50px;
-    
-}
-.Kays_item2 {
-    width: 70%  ;
-    margin: 0px 0px 0px 90px;
-     
-   
-    }
-
-
-.Kays_item {
-    width: 100px;
-    margin: 0px auto;
-    }
-
-
-
-    
     .Calculator{
     margin: 0px auto;
+        
 }
 
 .Calculator h4{
@@ -459,7 +444,7 @@ transition: all 0.2s;
     height: 25px;
     background: #336b44;
     color:#fff;
-   
+    max-width: 100%;
 }
 
 .value h2{
@@ -483,7 +468,7 @@ transition: all 0.2s;
 }
 
 
-.satistics h2{
+.satistics_container h2{
     text-align:center;
     border-bottom: 4px solid #d17700;
     width: 120px;
@@ -494,9 +479,9 @@ transition: all 0.2s;
       font-family: 'Lobster', cursive;
    
 }
-.satistics{
-    width: 100%;
-    height: 200px;
+.satistics_container{
+   max-width: 100%;
+    height: 250px;
     margin: 0 auto;
   background: url(..//img/photo_2022-10-04_01-40-52.jpg)  90% 100%/auto 100% fixed repeat;
     
@@ -510,6 +495,7 @@ transition: all 0.2s;
         text-align: center;
     
 }
+
 
 .satistics_item h3{
     color:#d17700;
@@ -527,6 +513,14 @@ transition: all 0.2s;
     overflow: hidden;  
 }
 
+@media only screen and (max-width: 767px){
+    .satistics_container{  height: 400px;}
+}
+
+@media only screen and (max-width: 576px){
+     .satistics_container{  height: 650px;}
+}
+
 .comment h2{
       font-family: 'Lobster', cursive;
     text-align: center;
@@ -542,6 +536,7 @@ transition: all 0.2s;
     width: 740px;
     margin: 0 auto;
     color: #336b44;
+        max-width: 100%;
 }
 
 
@@ -677,14 +672,4 @@ transition: all 0.2s;
 }
 .otpravit:active{
     transform: scale(0.9);
-}
-
-
-@media (min-height: 1000px)
-{
-  .contacts{
-    height: 25%;
-   
-
-   }
 }
