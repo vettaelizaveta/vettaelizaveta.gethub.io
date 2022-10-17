@@ -359,22 +359,18 @@ transition: all 0.2s;
 
 .Kays_item h3{
     font-size: 16px;
-    margin: 10px auto;
-    padding-top: 5px;
     text-align: left;
     width: 96px;
-    font-size: 16px;
-    margin: 7px 70px;
-    padding-bottom: 5px;
      color: #d17700;
 }
 
+.Kays_item p{
+     text-align: left;
+}
 
 .Kays_item input{
      text-align: center;
     width: 150px;
-   
-    text-align:left;
     border: 3px solid #336b44;
     background: #336b44;
     color: #fff;
@@ -384,6 +380,7 @@ transition: all 0.2s;
 
 .Kays_item input{
     transform: scale(1);
+    
 }
 .Kays_item input:hover{
     background: #336b44;
@@ -395,52 +392,45 @@ transition: all 0.2s;
     transform: scale(0.9);
 }
 
-.Kays_item { text-align: center;
-    width: 600px;
+.Kays_item { text-align: left;
+ 
     font-size: 16px;
-     margin: 7px 300px;
-    padding-bottom: 5px;
-
+   
 }
 .Kays_item h3{
     text-align: left;
     width: 200px;
     font-size: 16px;
-     margin: 7px 70px 0px 150px;
-    padding-bottom: 5px;
     color: #d17700;}
 
-.clear {
-    clear: left;
-}
+
 
 .Kays_item2 h3{
     text-align: left;
     width: 300px;
     font-size: 16px;
-    padding-bottom: 5px;
-        padding-left: 130px;
     color: #d17700;} 
 
     .Calculator{
-    margin: 0px auto;
-        
+   
 }
 
 .Calculator h4{
     width: 100px;
-    margin: 0px 170px;
+    
     color: #d17700;
      padding-top: 10px;
     line-height: 30px;
     font-size: 16px;
+     margin: auto auto;
+     text-align: center;
      
 }
 
 .value select{
     display: block;
      margin: auto auto;
-    width: 800px;
+    width: 200px;
     height: 25px;
     background: #336b44;
     color:#fff;
