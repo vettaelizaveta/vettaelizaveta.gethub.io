@@ -333,7 +333,7 @@ transition: all 0.2s;
 
 
 
-.Kays img{
+.Kays_container img{
      display: block;
     margin: 0 auto;
     width: 750px;
@@ -345,7 +345,7 @@ transition: all 0.2s;
 }
 
 
-.Kays h2{
+.Kays_container h2{
  text-align: center;
     width: 96px;
     font-size: 22px;
@@ -427,7 +427,7 @@ transition: all 0.2s;
      
 }
 
-.value select{
+.value_container select{
     display: block;
      margin: auto auto;
     width: 200px;
@@ -437,7 +437,7 @@ transition: all 0.2s;
     max-width: 100%;
 }
 
-.value h2{
+.value_container h2{
       font-family: 'Lobster', cursive;
     text-align: center;
  border-bottom: 4px solid #d17700;
@@ -450,7 +450,7 @@ transition: all 0.2s;
 }
 
 
-.value p{
+.value_container p{
      margin: 0px 170px;
       color: #336b44;
      font-size: 16px;
@@ -511,7 +511,7 @@ transition: all 0.2s;
      .satistics_container{  height: 650px;}
 }
 
-.comment h2{
+.comment_container h2{
       font-family: 'Lobster', cursive;
     text-align: center;
  border-bottom: 4px solid #d17700;
@@ -522,7 +522,7 @@ transition: all 0.2s;
      color: #336b44;
 }
 
-.comment{
+.comment_container{
     width: 740px;
     margin: 0 auto;
     color: #336b44;
@@ -530,7 +530,7 @@ transition: all 0.2s;
 }
 
 
-.comment img{
+.comment_container img{
     display: block;
     margin: 0 auto;
     border: 5px solid #336b44;
@@ -539,18 +539,18 @@ transition: all 0.2s;
     overflow: hidden;
 }
 
-.comment p{
+.comment_container p{
     margin-top: 20px;
     color:black;
 }
 .text2{ padding-bottom: 10px;}
 
 
-.contacts { width: 100%;
+.contacts_container { width: 100%;
     height: calc 100%;
     background: url(../img/fon2.jpg) 100% 100%/auto 100% repeat;}
 
-.contacts h2{
+.contacts_container h2{
       font-family: 'Lobster', cursive;
     text-align: center;
     border-bottom: 4px solid #d17700;
@@ -560,7 +560,7 @@ transition: all 0.2s;
     padding-bottom: 5px;
      color: #336b44;
 }
-.contacts{
+.contacts_container{
     width: 100%;
     margin: 0 auto;
        float: left;
