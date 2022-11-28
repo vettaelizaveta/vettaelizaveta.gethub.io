@@ -6,26 +6,32 @@
     <meta name="author" content="Liza Vetta">
     <meta name="robots" content="all">
     <meta name="og:title" content="Учусь разрабатывать веб-сайты">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel = "stylesheet" href ="css/reset.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-     <link rel = "stylesheet" href ="css/style.css">
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
- <title>MyProject</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style_loading.css">
+    <link rel = "stylesheet" href ="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://github.hubspot.com/odometer/themes/odometer-theme-default.css" rel="stylesheet">
+    <title>MyProject</title>
 </head>
 <body>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
-</style>
-<header>
+<div class="loader">
 <div class="loading-wrap">
     <div class="triangle1"></div>
     <div class="triangle2"></div>
     <div class="triangle3"></div>
-</div>
+</div></div>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+</style>
+
+
+<header>
 
 <nav>
         <div class="container">
@@ -35,12 +41,12 @@
         <div class="menu">
             
            <ul>
-               <li><a href="#">Обо мне</a></li>
-           <li><a href="#">Услуги</a></li>
-           <li><a href="#">Кейсы</a></li>
-           <li><a href="#">Прайс</a></li>
-           <li><a href="#">Отзывы</a></li>
-           <li><a href="#">Контакты</a></li>
+               <li><a href="#about_me">Обо мне</a></li>
+           <li><a href="#skills">Услуги</a></li>
+           <li><a href="#Kays">Кейсы</a></li>
+           <li><a href="#cost_calculator">Прайс</a></li>
+           <li><a href="#comments">Отзывы</a></li>
+           <li><a href="#Contacts">Контакты</a></li>
          </ul>
         </div> </div>
            </nav>
@@ -54,8 +60,8 @@
         <div class="title__container">
          <h1>Привет <br> Я Liza Vetta </h1>
          <h4>Фулл стек веб-разработчик </h4>
-         <input type="button" value="Обо мне">
-         <input type="button" value="Мои работы">
+          <a href="#about_me"><input type="button" value="Обо мне"></a>
+        <a href="#Kays"> <input type="button" value="Мои работы"  href="#Kays"></a>
      </div> 
     </div>
         </div>
@@ -116,27 +122,47 @@
      
      </main>
      
-     <section class="about_me">
+     <section class="section" id="about_me">
         <div class="about_me_container">
         
          <h2>Обо мне</h2>
     
         
-  <img class="d-blok mx-auto" src="img/Butter%20free%20icons%20designed%20by%20Freepik.png" alt="" class="animate__animated animate__flipInX">
+  <img src="img/Butter%20free%20icons%20designed%20by%20Freepik.png" alt="" class="animate__animated animate__flipInX" class="element-animation" >
     <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start ">
      <p class="firstText mt-3" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem cumque, ducimus quia id, doloremque laborum veritatis asperiores maiores delectus voluptates, ipsam, consectetur beatae earum accusantium impedit aut et. Cumque, beatae! </p>   
      <p class="secondText mt-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, nemo!</p></div> </div>
      <div class="row justify-content-center">
         <div class="col-6 col-sm-5 col-md-4 col-lg-2 text-center">
-<input type="submit" value="Скачать резюме">
+<input type="submit" value="Скачать резюме" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" id="button">
+
+<!-- Модальное окно -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">НОВОГОЛНЯЯ СКИДКА 10%</h5>
+       
+      </div>
+      <div class="modal-body">
+        При покупке сайта до 31.12.22 действует скидка 10%!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Понял</button>
+      </div>
+    </div>
+  </div>
+</div>
+    
      </div>    
         </div> </div>
         
      </section>
      
      
-     <section class="skills">
+     <section class="section" id="skills">
     <div class="skills_container container">
          <h2>Что я умею</h2>
         <div class="skills2"> 
@@ -168,13 +194,43 @@
       
      </div>  </div>  </div>  </section>
   
+        <section class="section" id="Kays">
         <div class="Kays_container">
          <h2>Мои кейсы</h2>
          <div class="row justify-content-center">
          <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start ">
          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, doloribus. </p> </div></div>
              
-              <img src="img/kays.JPG" alt="">
+             
+             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="img/kays.JPG" class="d-block w-80" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/kays.JPG" class="d-block w-80" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="img/kays.JPG" class="d-block w-80" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+             
+             
+             
           <div class="row justify-content-center text-center">
         <div class="Kays_item col-12 col-sm-6 col-md-2">
      <h3>CLIENT:</h3>
@@ -189,76 +245,128 @@
      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum delectus possimus dolorum incidunt maxime aut nam, provident dicta totam dolores corrupti quis quisquam, ex modi, hic sit odio quia quam.</p>
      </div></div>
      
-    </div>  </div>
+    </div>  </div></section>
      
-     <div class="value_container">
+     
+     <section class="section" id="cost_calculator">
+     <div class="value_container container">
          <h2>Расчет стоимости</h2>
         <div class="Calculator">
         <h4>Тип Сайта</h4>
-        <select name="site type" id="list1">
-            <option value="par1"> Выберите пункт</option>
-            <option value="opt1.1"> site 1 </option>
-            <option value="opt1.2"> site 2 </option>
-            <option value="opt1.3"> site 3 </option>
+        <select id="price1" class="mySelect" name="type" id="typeSite">
+            <option value="0" days="0"> Выберите пункт</option>
+            <option value="1000" days="1"> Сайт-визитка </option>
+            <option value="2000" days="2"> Корпоративный </option>
+            <option value="3000" days="3"> Интернет-магазин </option>
         </select>
      <h4>Дизайн</h4>
-        <select name="design" id="list2">
-            <option value="par2"> Выберите пункт</option>
-            <option value="opt2.1"> design 1 </option>
-            <option value="opt2.2"> design 2 </option>
-            <option value="opt2.3"> design 3 </option>
+        <select id="price2" class="mySelect"  name="type"  id="typeSite">
+            <option value="0" days="0"> Выберите пункт</option>
+            <option value="1000" days="1"> Шаблонный </option>
+            <option value="2000" days="2"> Уникальный </option>
+            <option value="3000" days="3"> WОW-Дизайн </option>
         </select>
      <h4>Адаптивность</h4>
-        <select name="adapt" id="list3">
-            <option value="par3"> Выберите пункт</option>
-            <option value="opt3.1"> adapt 1 </option>
-            <option value="opt3.2"> adapt 2 </option>
-            <option value="opt3.3"> adapt 3 </option>
+        <select  id="price3" class="mySelect"  name="type" id="typeSite">
+            <option value="0" days="0"> Выберите пункт</option>
+            <option value="1000" days="1"> Только ПК </option>
+            <option value="2000" days="2"> Только мобильные устройства </option>
+            <option value="3000" days="3"> ПК + мобильный </option>
         </select>
-        <p><br>Сроки 0 <br> Стоимость 0</p>
+        <div class="calculator_footer">
+           <div class="days">
+              <p class="text">Сроки</p>
+              <p class="total">0</p>
+              <div class="clear"></div>
+            </div>
+           <div class="price">
+              <p class="text">Сроки</p>
+              <p class="total">0</p>
+              <div class="clear"></div>
+           </div>
+            
+        </div>
      </div>
-     </div>
+     </div></section>
      
-     <section class="satistics">
+     <section class="section" id="satistics">
      <div class="satistics_container container" >
          <h2>Статистика</h2>
          <div class="satistics2">
+         <div class="counter-start">
           <div class="row justify-content-center text-center">
          <div class="satistics_item col-12  col-sm-6 col-md-3">
               <img src="img/0htxauQb3Y5yIdrXAfe8H2V3F0WQ6hqfYg9k8zCgYHbhxZsazENRLiBCvri5698gwBNbOky0NFtcHZU3Cfykh9Ov.png" alt=""  class="animate__animated animate__rollIn">
-             <h3>120</h3>
+              <h3 class="odometer" id="odometer1"></h3>
+
+          
              <p>Lorem ipsum</p>
          </div>
          <div class="satistics_item col-12  col-sm-6 col-md-3">
                    <img src="img/buojbPZAN8MDwZqJWI4Z3BnWodTjY08qDwXtKFZEA1vsYBoL1CUsajrl0gM61SG1huI-2mvgzevnXAAcz_6xd1az.png" alt=""  class="animate__animated animate__rollIn">
-             <h3>4600</h3>
+                   
+                     <h3 class="odometer" id="odometer2"></h3>
+       
              <p>Lorem ipsum</p>
          </div>
          <div class="satistics_item col-12  col-sm-6 col-md-3">
 <img src="img/1PZGPrwlAsdsJUVAphydArE5vbB7EUh_y4v4x73k_P0I4E-syNQINhg92Gg-Fwpy0X6y0Ov9X3fqXnUX14nx_nbQ.png" alt=""  class="animate__animated animate__rollIn">
-             <h3>340</h3>
+             <h3 class="odometer" id="odometer3"></h3>
              <p>Lorem ipsum</p>
          </div>
          <div class="satistics_item col-12  col-sm-6 col-md-3">
               <img src="img/l_JHWYcaWfu-vEQ3vD2aXM75iby5nZzsgnjtKGvgwhwOVFC0bw0rusnxzNM5Ko_y055kzLsNt2fmmjUrExX9Nv-s.png" alt=""class="animate__animated animate__rollIn">
-             <h3>23</h3>
+             <h3 class="odometer" id="odometer4"></h3>
              <p>Lorem ipsum</p>
          </div>
-       </div></div></div>
+       </div></div></div></div>
      </section>
      
      
+     <section class="section" id="comments">
      <div class="comment_container">
          <h2>Отзывы</h2>
-          <div class="row justify-content-center">
+         
+         <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-interval="0.5" data-bs-interval="10000">
+      <div class="row justify-content-center">
         <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start ">
         <img src="img/Lemon%20free%20vector%20icons%20designed%20by%20Icongeek26.png" alt="" class="animate__animated animate__flipInX">
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora expedita necessitatibus ullam tempore sint, error iusto quae architecto laboriosam vero illum adipisci eum voluptatibus sit eos dolore nesciunt. Harum, incidunt.</p>
         <p class="text2"> <b>Lorem</b> ipsum dolor sit amet.</p>
 </div></div>
-     </div>
+    </div>
+    <div class="carousel-item" data-interval="0.5" data-bs-interval="2000">
+      <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start ">
+        <img src="img/Lemon%20free%20vector%20icons%20designed%20by%20Icongeek26.png" alt="" class="animate__animated animate__flipInX">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora expedita necessitatibus ullam tempore sint, error iusto quae architecto laboriosam vero illum adipisci eum voluptatibus sit eos dolore nesciunt. Harum, incidunt.</p>
+        <p class="text2"> <b>Lorem</b> ipsum dolor sit amet.</p>
+</div></div>
+    </div>
+    <div class="carousel-item"data-interval="0.5">
+     <div class="row justify-content-center">
+        <div class="col-12 col-sm-10 col-md-9 col-lg-8 text-center text-md-start ">
+        <img src="img/Lemon%20free%20vector%20icons%20designed%20by%20Icongeek26.png" alt="" class="animate__animated animate__flipInX">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora expedita necessitatibus ullam tempore sint, error iusto quae architecto laboriosam vero illum adipisci eum voluptatibus sit eos dolore nesciunt. Harum, incidunt.</p>
+        <p class="text2"> <b>Lorem</b> ipsum dolor sit amet.</p>
+</div></div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"  data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"  data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+    </div></section>
      
      
+     <section class="section" id="Contacts">
       <div class="contacts_container">
        <h2>Мои контакты</h2>
          
@@ -292,9 +400,21 @@
          <input class="otpravit" type="submit" value="Отправить">
            
              </div>  
-             </div>  
+             </div> </section> 
              
+             
+             
+             
+             
+             
+             
+             
+             
+             
+             
+        <script src="js/jquery-3.6.1.min.js"> </script>
+        <script src='js/bootstrap.bundle.min.js'></script>     
     <script src="js/calc.js"> </script>
-            
+            <script src="https://github.hubspot.com/odometer/odometer.js"></script>
 </body>
 </html>

@@ -53,13 +53,23 @@ nav{
     display: inline-block;
     text-decoration:none; 
 }
+.menu li a.active {
+     color: white;
+}
 
 .menu li a:hover{
     color: white;
 }
 .menu li a:active{
     transform: scale(0.9);
+     color: white;
 }
+
+
+
+
+
+
 
 @keyframes topshift {
     from {
@@ -244,18 +254,27 @@ transition: all 0.2s;
 
 .about_me_container img{
     display: block;
+     margin: 0 auto;
     border: 5px solid #336b44;
     width: 70px;
     height: 70px;
     overflow: hidden;
 }
 
+.element-animation{
+    opacity: 0;
+}
+
+.element-animation.show-animation{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+
+
 
 .about_me_container input{
         display: block;
-     width: 120px;
-    height: 25px;
-    text-align: center;
     border: 2px solid #336b44;
     background: none;
     border-radius: 5px;
@@ -268,14 +287,34 @@ transition: all 0.2s;
 
 .about_me_container input{
     transform: scale(1);
+    
 }
-.about_me_container input:hover{
+#button:hover{
     background: #336b44;
     color:white;
+    border: 2px solid #336b44;
 }
-.about_me_container input:active{
+#button:active{
     transform: scale(0.9);
+    background: #336b44;
+     color:white;
 }
+
+#staticBackdrop{
+   
+     color:#ffba00;
+}
+
+
+.about_me_container button{
+    background: #336b44;
+    color:white;
+    border: 2px solid #336b44;
+}
+
+
+
+
 
 .skills_container{
      padding-top: 90px;
@@ -411,13 +450,10 @@ transition: all 0.2s;
     font-size: 16px;
     color: #d17700;} 
 
-    .Calculator{
-   
-}
+
 
 .Calculator h4{
     width: 100px;
-    
     color: #d17700;
      padding-top: 10px;
     line-height: 30px;
@@ -430,7 +466,7 @@ transition: all 0.2s;
 .value_container select{
     display: block;
      margin: auto auto;
-    width: 200px;
+    width: 300px;
     height: 25px;
     background: #336b44;
     color:#fff;
@@ -451,7 +487,7 @@ transition: all 0.2s;
 
 
 .value_container p{
-     margin: 0px 170px;
+    text-align: center;
       color: #336b44;
      font-size: 16px;
        line-height:normal;
@@ -664,3 +700,18 @@ transition: all 0.2s;
 .otpravit:active{
     transform: scale(0.9);
 }
+
+html{
+    scroll-behavior: smooth;
+}
+:target{
+    scroll-margin-top: 70px;
+}
+
+
+
+
+
+
+
+
