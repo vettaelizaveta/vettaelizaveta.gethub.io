@@ -1,5 +1,7 @@
 $(document).ready(function(){
     $(".loader").css("display","none");
+    
+    
      function calculate (){
          let sum = parseInt($("#price1 option:selected").val())+ parseInt($("#price2 option:selected").val())+ parseInt($("#price3 option:selected").val());
    let days = sum/1000;
